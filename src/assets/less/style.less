@@ -155,8 +155,9 @@ table {
     padding: 5px 0;
     color:#000 !important;
     &.active {
-      border-bottom: 2px solid #006eff;
+      border-bottom: 2px solid #A9B9ED;
       font-weight: bold;
+      //color: #A9B9ED !important;
       a {
         color: #000;
         font-weight: bold;
@@ -360,6 +361,28 @@ table {
 }
 .short {
   width: 150px;
+}
+.container-wrap{
+  background: #fff;
+  border: 1px solid #E9E9E9;
+  box-shadow: #ccc 2px 0px 6px;
+  margin-top: 15px;
+  .table-wrap{
+    min-height:460px;
+    width:100%;
+    /*overflow-x: auto;*/
+    table {
+      th{
+        padding:0 8px;
+        height:40px;
+        color:#888;
+      }
+      tbody tr td{
+        height:56px;
+        padding:0 8px;
+      }
+    }
+  }
 }
 // 表格太长，显示横向滚动条
 .table-wrap {

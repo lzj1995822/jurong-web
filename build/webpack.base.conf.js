@@ -4,7 +4,8 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 // 入口js文件
-var entries = utils.getEntries('./src/modules/*/*.js')
+var entries = utils.getEntries('./src/modules/*/*.js');
+var webpack = require("webpack");
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -73,5 +74,12 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.ProvidePlugin({
+      jQuery: "jquery",
+      $: "jquery"
+    })
+  ]
 }

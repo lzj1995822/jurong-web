@@ -15,7 +15,7 @@
           </div>
           <div class="error" v-if="authError">{{errorMessage}}</div>
           <input type="button" class="login-btn" value="登录" @click="login"/>
-          <hr>
+          <!--<hr>-->
           <div class="option-wrap">
             <!--<input type="checkbox" id="remember-me" class="pointer" v-model="rememberMe"/>-->
             <!--<label for="remember-me" class="pointer">记住我</label>-->
@@ -95,23 +95,14 @@
             // 登录请求
             loginService.authenticate(this.auth)
             .then((res) => {
-              if (res && res.status === 200) {
-                // 登录成功后保存access_token
-                // sessionStorage.setItem('access_token', res.data.access_token);
-                // $.cookie('token', res.data.content.token, { expires: 30, path: '/' });
-                // $.cookie('userType', res.data.content.userType, { expires: 30, path: '/' });
+              if (res && res.status === 200 && res.data.success) {
+                // 登录成功后保存token
+                this.authError = false;
                 sessionStorage.setItem('token', res.data && res.data.content && res.data.content.token);
                 sessionStorage.setItem('userType', res.data && res.data.content && res.data.content.userType);
-                location.href = '/#/home';
-                // 记住我功能
-                // if (this.rememberMe) {
-                //   localStorage.setItem('user_name', this.auth.username);
-                //   localStorage.setItem('remember_me', this.rememberMe);
-                // } else {
-                //   localStorage.removeItem('user_name');
-                //   localStorage.removeItem('remember_me');
-                // }
+                location.href = '/#/center-management/base-data';
               } else {
+                this.authError = true;
                 this.errorMessage = res.data.message;
               }
             });
@@ -216,8 +207,8 @@
         box-shadow: 1px 1px 1px 1px rgba(0,0,0,.075);
       }
       .form {
-        /*background: rgba(255, 255, 255, 0.2);*/
-        background: #fff;
+        background: rgba(255, 255, 255, 0.5);
+        /*background: #fff;*/
         width: 310px;
         padding: 40px 25px 50px;
         /*margin-left: 665px;*/

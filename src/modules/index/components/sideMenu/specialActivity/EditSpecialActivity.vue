@@ -118,7 +118,7 @@
 
 <style scoped lang="less">
 .special-activity-detail{
-  top: 5% !important;
+  /*top: 5% !important;*/
   .modal-container{
     min-width: 800px !important;
     .close{

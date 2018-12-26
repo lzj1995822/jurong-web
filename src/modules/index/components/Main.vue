@@ -35,7 +35,7 @@
   .main {
     margin-top:20px;
     .wrap {
-      padding: 60px 20px 20px 245px;
+      padding: 70px 20px 20px 280px;
       &>div {
         background: #fff;
         padding: 20px;
