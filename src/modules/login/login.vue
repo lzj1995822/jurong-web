@@ -17,9 +17,9 @@
           <input type="button" class="login-btn" value="登录" @click="login"/>
           <hr>
           <div class="option-wrap">
-            <input type="checkbox" id="remember-me" class="pointer" v-model="rememberMe"/>
-            <label for="remember-me" class="pointer">记住我</label>
-            <a class="fr pointer">注册新账号</a>
+            <!--<input type="checkbox" id="remember-me" class="pointer" v-model="rememberMe"/>-->
+            <!--<label for="remember-me" class="pointer">记住我</label>-->
+            <!--<a class="fr pointer">注册新账号</a>-->
           </div>
         </div>
       </div>
@@ -40,8 +40,8 @@
       return {
         // 用户名、密码
         auth: {
-          userId: 'center',     // 用户名
-          userPwd: '123456'      // 密码，写死方便测试
+          userId: '',     // 用户名
+          userPwd: ''      // 密码，写死方便测试
           // client_id: 'webapp',
           // client_secret: 'webapp',
           // grant_type: 'password'
