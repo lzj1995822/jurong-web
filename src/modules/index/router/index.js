@@ -24,42 +24,66 @@ export default new Router({
         {
           path: 'home',     // 首页
           name: 'Home',
-          component: Home
+          component: Home,
+          meta: {
+            title: '首页'
+          }
         },
         {
           path: 'center',     // 分中心建设
           name: 'Center',
-          component: Center
+          component: Center,
+          meta: {
+            title: '分中心建设'
+          }
         },
         {
           path: 'activity',     // 文明实践
           name: 'Activity',
-          component: Activity
+          component: Activity,
+          meta: {
+            title: '活动管理'
+          }
         },
         {
           path: 'stop',     // 所站建设
           name: 'Stop',
+          meta: {
+            title: '镇所建设'
+          },
           component: Stop
         },
         {
           path: 'activity-management',     // 活动管理
           name: 'ActivityManage',
-          component: ActivityManage
+          component: ActivityManage,
+          meta: {
+            title: '活动管理'
+          }
         },
         {
           path: 'special-activity',     // 特色活动
           name: 'SpecialActivity',
-          component: SpecialActivity
+          component: SpecialActivity,
+          meta: {
+            title: '特色活动'
+          }
         },
         {
           path: 'notice',     // 通知公告
           name: 'Notice',
-          component: Notice
+          component: Notice,
+          meta: {
+            title: '通知公告'
+          }
         },
         {
           path: 'system',     // 系统设置
           name: 'System',
-          component: System
+          component: System,
+          meta: {
+            title: '系统设置'
+          }
         }
       ]
     }

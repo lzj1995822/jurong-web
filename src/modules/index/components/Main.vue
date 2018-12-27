@@ -4,6 +4,7 @@
     <breadcrumbs></breadcrumbs>
     <!--<top-title></top-title>-->
     <div class="wrap">
+      <container-header>qweqw</container-header>
       <router-view></router-view>
     </div>
   </div>
@@ -13,7 +14,7 @@
   import Breadcrumbs from 'common/components/Breadcrumbs';
   import SideMenu from 'common/components/SideMenu';
   import TopTitle from 'common/components/TopTitle';
-
+  import ContainerHeader from './sideMenu/public/ContainerHeader';
   export default {
     name: 'tf-main',
 
@@ -26,7 +27,8 @@
     components: {
       TopTitle,
       Breadcrumbs,
-      SideMenu
+      SideMenu,
+      ContainerHeader
     }
   };
 </script>

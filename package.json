@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "echarts": "^3.6.2",
+    "element-ui": "^2.4.11",
     "flatpickr": "^3.0.6",
     "jquery": "1.11.3",
     "vue": "^2.3.3",
