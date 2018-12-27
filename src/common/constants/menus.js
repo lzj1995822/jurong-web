@@ -1,66 +1,117 @@
 module.exports = [
+  // 分中心管理
   {
-    url: 'home',
-    title: '组织架构',
-    desc: '组织架构',
-    icon: 'icon-menu-1.png',
-    iconHover: 'icon-menu-1-hover.png',
-    requirePermissions: []
+    url: 'center-management',
+    title: '分中心管理',
+    // icon: 'icon-menu-5.png',
+    requirePermissions: [],
+    children: [
+      {
+        title: '分中心基础数据',
+        url: 'base-data',
+        requiredPermissions: []
+      },
+      {
+        title: '分中心建设',
+        url: 'center-build',
+        requiredPermissions: []
+      },
+      {
+        title: '分中心活动管理',
+        url: 'activity-management',
+        requiredPermissions: []
+      },
+      {
+        title: '发布公告',
+        url: 'publish-announce',
+        requiredPermissions: []
+      }
+    ]
+  },
+  // 所站管理
+  {
+    url: 'stop-management',
+    title: '所站管理',
+    // icon: 'icon-menu-5.png',
+    requirePermissions: [],
+    children: [
+      {
+        title: '所站基础数据',
+        url: 'base-data',
+        requiredPermissions: []
+      },
+      {
+        title: '功能室建设',
+        url: 'features-build',
+        requiredPermissions: []
+      },
+      {
+        title: '所站活动管理',
+        url: 'activity-manage',
+        requiredPermissions: []
+      }
+    ]
+  },
+  // 决策引擎规则集
+  {
+    url: 'village-management',
+    title: '村站管理',
+    // icon: 'icon-menu-5.png',
+    requirePermissions: [],
+    children: [
+      {
+        title: '村站基础信息管理',
+        url: 'base-data',
+        requiredPermissions: []
+      },
+      {
+        title: '村站活动管理',
+        url: 'activity-management',
+        requiredPermissions: []
+      }
+    ]
   },
   {
-    url: 'center',
-    title: '分中心建设',
-    desc: '分中心建设',
-    icon: 'icon-menu-2.png',
-    iconHover: 'icon-menu-2-hover.png',
-    requirePermissions: []
+    url: 'volunteer-service',
+    title: '文明实践志愿服务队',
+    // icon: 'icon-menu-5.png',
+    requirePermissions: [],
+    children: [
+      {
+        title: '基础信息',
+        url: 'base-info',
+        requiredPermissions: []
+      },
+      {
+        title: '服务队伍',
+        url: 'service-team',
+        requiredPermissions: []
+      }
+    ]
   },
   {
-    url: 'activity',
-    title: '文明实践',
-    desc: '志愿服务队伍体系',
-    icon: 'icon-menu-3.png',
-    iconHover: 'icon-menu-3-hover.png',
-    requirePermissions: []
-  },
-  {
-    url: 'stop',
-    title: '所站建设',
-    desc: '所站建设',
-    icon: 'icon-menu-4.png',
-    iconHover: 'icon-menu-4-hover.png',
-    requirePermissions: []
-  },
-  {
-    url: 'activity-management',
-    title: '活动管理',
-    desc: '活动管理',
-    icon: 'icon-menu-5.png',
-    iconHover: 'icon-menu-5-hover.png',
-    requirePermissions: []
-  },
-  {
-    url: 'special-activity',
-    title: '特色活动',
-    desc: '特色活动',
-    icon: 'icon-menu-6.png',
-    iconHover: 'icon-menu-6-hover.png',
-    requirePermissions: []
-  },
-  {
-    url: 'notice',
+    url: 'announce',
     title: '通知公告',
-    desc: '通知公告',
-    icon: 'icon-menu-7.png',
-    iconHover: 'icon-menu-7-hover.png',
+    // icon: 'icon-menu-5.png',
+    requirePermissions: []
+    // children: [
+    //   {
+    //     title: '通知公告',
+    //     url: '',
+    //     requiredPermissions: []
+    //   }
+    // ]
+  },
+  {
+    url: 'system-config',
+    title: '系统配置',
+    // icon: 'icon-menu-5.png',
     requirePermissions: []
   },
   {
-    url: 'system',
-    title: '系统设置',
-    desc: '通知公告',
-    icon: 'icon-menu-8.png',
-    iconHover: 'icon-menu-8-hover.png',
+    url: 'system-operation',
+    title: '系统运维',
+    // icon: 'icon-menu-5.png',
     requirePermissions: []
   }
 ];

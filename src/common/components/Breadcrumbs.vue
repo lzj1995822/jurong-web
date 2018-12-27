@@ -31,7 +31,7 @@
     mounted () {
       this.paths = this.$route.path.substring(1).split('/');
       this._initBreadcrumbs(allMenus);
-      this.navigators.unshift({title: '首页', url: 'home'});
+      // this.navigators.unshift({title: '', url: 'center-build'});
     },
 
     methods: {
@@ -50,13 +50,6 @@
             }
           }
         }
-      },
-      /**
-       * 点击菜单跳转（已弃用）
-       */
-      directTo (url) {
-//        location.replace(location.protocol + '//' + location.host + '#/' + url);
-        location.replace(location.origin + (url === 'home' ? '' : location.pathname) + '#/' + url);
       }
     },
 
@@ -67,7 +60,7 @@
 //        this.navigators.push({title: '首页', url: 'home'});
         this.paths = to.path.substring(1).split('/');
         this._initBreadcrumbs(allMenus);
-        this.navigators.unshift({title: '首页', url: 'home'});
+        // this.navigators.unshift({title: '分中心管理', url: 'center-management/center-build'});
         scrollTo(0, 0);     // 切换路由，滚动条滚动到顶端
       }
     }
@@ -81,7 +74,7 @@
     background: #EDF0FA !important;
     position: fixed;
     width: 100%;
-    left: 212px;
+    left: 245px;
     top:100px;
     z-index: 5;
     line-height: 34px;

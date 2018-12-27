@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "bootbox": "^4.4.0",
     "echarts": "^3.6.2",
     "element-ui": "^2.4.11",
     "flatpickr": "^3.0.6",

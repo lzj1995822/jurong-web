@@ -55,6 +55,7 @@
 <style lang="less" scoped>
   .text-right{
     text-align: right;
+    margin-right:10px;
   }
   .pagination {
     padding: 0;

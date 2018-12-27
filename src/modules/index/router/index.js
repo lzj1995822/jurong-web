@@ -1,91 +1,108 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Main from '../components/Main';
-import Home from '../components/Home';
-import Center from '../components/sideMenu/Center';
-import Activity from '../components/sideMenu/Activity';
-import Stop from '../components/sideMenu/Stop';
-import ActivityManage from '../components/sideMenu/ActivityManage';
-import SpecialActivity from '../components/sideMenu/specialActivity/SpecialActivity';
-import Notice from '../components/sideMenu/Notice';
-import System from '../components/sideMenu/System';
-// import Center from '../components/sideMenu/Center';
+import CenterBaseData from '../components/centerManage/CenterBaseData';
+import CenterBuild from '../components/centerManage/CenterBuild';
+import ActivityManagement from '../components/centerManage/ActivityManagement';
+import PublishAnnounce from '../components/centerManage/PublishAnnounce';
+import StopBaseData from '../components/stopManage/StopBaseData';
+import FeatureBuild from '../components/stopManage/FeatureBuild';
+import StopActManage from '../components/stopManage/StopActManage';
+import VillageBaseData from '../components/villageManage/VillageBaseData';
+import VillageActManage from '../components/villageManage/VillageActManage';
+import VolunteerBaseInfo from '../components/VolunteerService/VolunteerBaseInfo';
+import VolunteerServiceTeam from '../components/VolunteerService/VolunteerServiceTeam';
+import Announce from '../components/Announce';
+import SystemConfig from '../components/SystemConfig';
+import SystemOperation from '../components/SystemOperation';
 Vue.use(Router);
 
 export default new Router({
   routes: [
-    // API调用
     {
       path: '/',
       name: 'QueryMain',
       component: Main,
-      redirect: '/home', // 默认跳转到首页
+      redirect: '/center-management/base-data', // 默认跳转到分中心基础数据
       children: [
         {
-          path: 'home',     // 首页
-          name: 'Home',
-          component: Home,
-          meta: {
-            title: '首页'
-          }
+          path: 'center-management/base-data',     // 分中心基础数据
+          name: 'CenterBaseData',
+          component: CenterBaseData
         },
         {
-          path: 'center',     // 分中心建设
-          name: 'Center',
-          component: Center,
-          meta: {
-            title: '分中心建设'
-          }
+          path: 'center-management/center-build',     // 分中心建设
+          name: 'CenterBuild',
+          component: CenterBuild
         },
         {
-          path: 'activity',     // 文明实践
-          name: 'Activity',
-          component: Activity,
-          meta: {
-            title: '活动管理'
-          }
+          path: 'center-management/activity-management',     // 分中心活动管理
+          name: 'ActivityManagement',
+          component: ActivityManagement
         },
         {
-          path: 'stop',     // 所站建设
-          name: 'Stop',
-          meta: {
-            title: '镇所建设'
-          },
-          component: Stop
+          path: 'center-management/publish-announce',     // 发布公告
+          name: 'PublishAnnounce',
+          component: PublishAnnounce
         },
         {
-          path: 'activity-management',     // 活动管理
-          name: 'ActivityManage',
-          component: ActivityManage,
-          meta: {
-            title: '活动管理'
-          }
+          path: 'stop-management/base-data',     // 所站基础数据
+          name: 'StopBaseData',
+          component: StopBaseData
         },
         {
-          path: 'special-activity',     // 特色活动
-          name: 'SpecialActivity',
-          component: SpecialActivity,
-          meta: {
-            title: '特色活动'
-          }
+          path: 'stop-management/features-build',     // 功能室建设
+          name: 'FeatureBuild',
+          component: FeatureBuild
         },
         {
-          path: 'notice',     // 通知公告
-          name: 'Notice',
-          component: Notice,
-          meta: {
-            title: '通知公告'
-          }
+          path: 'stop-management/activity-manage',     // 所站活动管理
+          name: 'StopActManage',
+          component: StopActManage
         },
         {
-          path: 'system',     // 系统设置
-          name: 'System',
-          component: System,
-          meta: {
-            title: '系统设置'
-          }
+          path: 'village-management/base-data',     // 村站基础信息管理
+          name: 'VillageBaseData',
+          component: VillageBaseData
+        },
+        {
+          path: 'village-management/activity-management',     // 村站活动管理
+          name: 'VillageActManage',
+          component: VillageActManage
+        },
+        {
+          path: 'volunteer-service/base-info',     // 文明实践志愿服务队  基础信息
+          name: 'VolunteerBaseInfo',
+          component: VolunteerBaseInfo
+        },
+        {
+          path: 'volunteer-service/service-team',     // 文明实践志愿服务队  基础信息
+          name: 'VolunteerServiceTeam',
+          component: VolunteerServiceTeam
+        },
+        {
+          path: 'announce',     // 通知公告
+          name: 'Announce',
+          component: Announce
+        },
+        {
+          path: 'system-config',     // 系统配置
+          name: 'SystemConfig.',
+          component: SystemConfig
+        },
+        {
+          path: 'system-operation',     // 系统运维
+          name: 'SystemOperation',
+          component: SystemOperation
         }
       ]
     }
+    // {
+    //   path: '/',
+    //   name: '',
+    //   component: Main,
+    //   redirect: '',
+    //   children: []
+    // }
   ]
 });
